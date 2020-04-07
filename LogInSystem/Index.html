@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav>
+		
+	</nav>
+	<br>
+	<div class="container">
+		<center>
+			<img src="img/icon.png" alt="user icon">
+		</center>
+		<br>
+		<form>
+			<center>
+				<input type="email" placeholder="Username"id="email" required> <br><br><br>
+				<input type="password" id="pass"name="password" placeholder="Password"required><br>
+				<p id="message"></p>
+					<br><br>			
+					<label class="switch">
+		  				<input type="checkbox" name="remember">
+		  				<div class="slider round"></div>
+					</label>
+					<label class="Keep">
+						Keep me logged in.
+					</label><br><br>
+				<input type="button" onclick="validateUser()" name="submit" value="Get Started">
+			</center>		
+		</form>
+		
+	</div>
+
+	<script type="text/javascript">
+	function validateUser(){
+		var text, mail, user, userEmail, userPassword;
+		userEmail="user@gmail.com";
+		userPassword="password.user";
+		mail=document.getElementById("email").value;
+		user=document.getElementById("pass").value;
+		if((mail==userEmail)&&(user==userPassword)){
+			text="Login successfully!";
+			document.getElementById("message").style.color = "green";
+			
+		}
+		else{
+			text="Invalid Login details!";
+			document.getElementById("message").style.color = "red";
+		}
+		document.getElementById("message").innerHTML = text;
+	}
+</script>
+
+</body>
+
+</html>
